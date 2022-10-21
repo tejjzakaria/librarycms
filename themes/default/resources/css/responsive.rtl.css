@@ -1,0 +1,110 @@
+@media (max-width : 1199.98px) {
+    .authors-list .author img {
+        width  : 100%;
+        height : 160px;
+    }
+
+    .single-post .post-content {
+        padding : 0;
+    }
+
+    .blog-posts .post {
+        max-height : 470px;
+        min-height : 470px;
+    }
+}
+
+@media (max-width : 991.98px) {
+    .header {
+        padding : 5px 0;
+    }
+
+    .header .col-12 {
+        -webkit-box-ordinal-group : 4;
+        -ms-flex-order            : 3;
+        order                     : 3;
+    }
+
+    .primary-menu {
+        padding-right : 0;
+        padding-left  : 2rem;
+        text-align    : right;
+    }
+
+    .menu-toggler {
+        display : block;
+    }
+
+    .primary-menu .dropdown-menu {
+        box-shadow   : none;
+        margin-right : .75rem;
+        text-align   : right;
+    }
+
+    .book-list .book-cover img {
+        height : 150px;
+        width  : 90px;
+    }
+
+    #book-filter {
+        display : none;
+    }
+
+    .top-filter {
+        margin : 5px 0 30px;
+    }
+
+    .top-filter .text {
+        text-align : center;
+    }
+
+    .single-book .book-cover, .single-book h1, .single-book .book-year, .single-book .book-rating {
+        text-align : center;
+    }
+
+    .single-book .book-cover:hover .edit-book {
+        display : none;
+    }
+
+    .blog-posts .post {
+        max-height : 450px;
+        min-height : 450px;
+    }
+    .mini-list-authors .author-info {
+        max-width: 260px;
+    }
+}
+
+@media (max-width : 767.98px) {
+    .home-book-carousel .book-cover img {
+        height : 140px;
+        margin : 30px 0 0;
+    }
+
+    .blog-posts .post {
+        max-height : 380px;
+        min-height : 380px;
+    }
+}
+
+@media (max-width : 575.98px) {
+    .home-book-carousel .book-cover img {
+        height : 190px;
+        margin : 0;
+    }
+
+    .logo img {
+        max-width : 120px;
+    }
+
+    .blog-posts .post {
+        max-height : 100%;
+        min-height : auto;
+    }
+}
+
+@media (max-width : 400px) {
+    .home-book-carousel .book-cover img {
+        height : 150px;
+    }
+}

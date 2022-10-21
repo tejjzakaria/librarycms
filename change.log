@@ -1,0 +1,78 @@
+v 2.2.0
+    Added user filter
+    Added book filter settings
+    Added user book logs
+    Added some new site view settings
+    Fixed some bugs
+v 2.1.1
+    Fixed some bugs
+    Added manually translated German Language
+v 2.0.7
+    Added RSS Feed
+    Fixed some bugs
+v 2.0.2
+    Fixed some bugs
+v 2.0
+    Added book custom fields
+    Added support change book layout
+    Added sms notification
+    Added social networks authorization (facebook, twitter, google)
+    Added google search on book page
+    Added book copies
+    Added book logs
+    Added book images
+    Added book tags
+    Added dark color schema for public theme
+    Added dark color schema for admin theme
+    Added book view type for public theme (grid, list, mini list)
+    Added support change book URL type
+    Added many settings
+    Fixed some bugs
+v 1.2.0
+    Added some book fields customizing
+    Added LDAP support
+    Fixed some bugs
+v 1.1.2
+    Fixed database rating issue
+    Fixed minor issue with book displaying
+v 1.1.1
+    Added support RTL languages
+    Added auto detect csv columns in import
+    Updated book rating
+    Fixed some minor issues
+v 1.1.0
+    Added frontend theme support
+    Added new frontend theme (Default).
+    There is also old Simple theme (support of this theme will be stopped in next release).
+    Added ability to read new eBook formats (epub, fb2)
+    Added book reviews
+    Added book rating
+    Added book and post sharing
+    Added sitemap generation. It includes books, posts and pages.
+    Added SEO book setting
+    Added bulk book editing
+    Added ability to generate and print book bar codes
+    Added a lot of new options in Site View Setting
+    Added new elements on main page (default theme only):
+        Top rated books as carousel
+        Popular Authors
+        Last News
+    Updated import and export
+    Updated Russian locale
+    Updated documentation
+v 1.0.3
+    Added new pages: list of books in a particular store/location
+    Added some new settings:
+        setting up default language
+        configuration of displaying eBook download link
+        configuration of displaying public pages for registered users only
+        configuration of ability to turn on/off user registration
+    Added the ability to read books (pdf only)
+    Added book bulk delete action
+v 1.0.2
+    Added new fields to Book: Book ID (something like book serial number), Store (for example library address or library name), Location (for example rack number/name in library store), eBook (electronic version of book).
+    Added some new pages: store/location listings, store/location add/edit/delete actions.
+    Added eBook support.
+v 1.0.1
+    Updated drawing public menu tree
+    Security fix for image uploading

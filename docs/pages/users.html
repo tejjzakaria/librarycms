@@ -1,0 +1,160 @@
+<html lang="en">
+    <head>
+        <title>Library CMS Documentation</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="author" content="KAASoft">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="shortcut icon" href="../resources/images/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/lightbox/ekko-lightbox.css">
+        <link rel="stylesheet" href="../resources/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/prismjs/prism.css">
+        <link rel="stylesheet" href="../resources/css/styles.css">
+    </head>
+    <body class="ready sticky">
+        <main>
+            <button class="sidebar-toggle">
+                <div class="sidebar-toggle-button"><span></span><span></span><span></span></div>
+            </button>
+            <aside class="sidebar">
+                <div class="logo text-center mb-3">
+                    <img src="../resources/images/logo.png" alt="Logo">
+                </div>
+                <div class="sidebar-nav">
+                    <ul>
+                        <li><a href="../index.html" id="index">Home</a></li>
+                        <li><a href="requirements.html" id="requirements">Requirements</a></li>
+                        <li><a href="installation.html" id="installation">Installation & Update</a></li>
+                        <li class="active">
+                            <a class="has-arrow" href="#">Admin Portal</a>
+                            <ul class="sub-menu collapse show">
+                                <li><a href="dashbord.html" id="dashbord">Dashboard</a></li>
+                                <li><a href="books.html" id="books">Books</a></li>
+                                <li><a href="issued-books.html" id="issued-books">Issued Books</a></li>
+                                <li><a href="requested-books.html" id="requested-books">Requested Books</a></li>
+                                <li><a href="public.html" id="public">Public</a></li>
+                                <li><a class="active" href="users.html" id="users">Users</a></li>
+                                <li><a href="settings.html" id="settings">Settings</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">Frontend</a>
+                            <ul class="collapse sub-menu">
+                                <li><a href="public-index.html" id="public-index">Homepage</a></li>
+                                <li><a href="public-books.html" id="public-books">Books</a></li>
+                                <li><a href="public-authors.html" id="public-authors">Authors</a></li>
+                                <li><a href="public-contact-page.html" id="public-contact-page">Contact Us</a></li>
+                                <li><a href="public-blog.html" id="public-blog">Blog</a></li>
+                                <li><a href="public-other.html" id="public-other">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="source-credits.html" id="source-credits">Source & Credits</a></li>
+                        <li><a href="change-list.html" id="change-list">Change List</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="content">
+                <article class="markdown-section" id="main">
+                    <h2 id="dashboard">
+                        Users
+                    </h2>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>User Listing</h4>
+                                <p>Here you can see full list of registered users and fast access to any of them. There is available actions to create, edit and delete any user, except deleting of user with ID = 1 (this is site administrator that created during installation). Also you can start of user creation on this page.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/users.png" data-title="User Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/users_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/users.png" data-title="User Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Add/Edit User</h4>
+                                <p>User edit page allows create/edit users. User’s email, password and role are required fields for user creation. All other fields can be filled later or leaved empty (it will be hard to identify user without name on Users page; you should know user’s email in this case).</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_user.png" data-title="Add/Edit User" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_user_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_user.png" data-title="Add/Edit User" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Role Listing</h4>
+                                <p>User’s role is a ticket to different part of admin portal. By default, there is three user roles:</p>
+                                <ul>
+                                    <li>Admin</li>
+                                    <li>Librarian</li>
+                                    <li>Member</li>
+                                </ul>
+                                <p>However, new user roles can be created. It will possibly require some modifications in templates. Also you have to specify list of permissions for each role. Permission is access to specific page. Additional development is required in case you want to provide access to the same page some user roles but each role should have different view.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/roles.png" data-title="Role Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/roles_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/roles.png" data-title="Role Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Add/Edit Role</h4>
+                                This page helps you with creation/edition user roles. As described above each user role has a number of permissions. Enabling permission in role means you provide access to specific page for each user who has this role. Also user have some additional properties like:
+                                <ul>
+                                    <li>
+                                        <strong>Issue day limit</strong> – how much days user can get book without penalty.
+                                    </li>
+                                    <li>
+                                        <strong>Issue book limit</strong> – how much books user can get at the same time.
+                                    </li>
+                                    <li>
+                                        <strong>Fine per day</strong> – if issue day limit ends user will pay this price for each day until book will be returned.
+                                    </li>
+                                    <li>
+                                        <strong>Priority</strong> – flag that helps to identify what content should be displayed if some user role has access to the same page. Predefined user roles have following priorities:
+                                        <ul>
+                                            <li>Admin = <strong>255</strong></li>
+                                            <li>Librarian = <strong>200</strong></li>
+                                            <li>Member = <strong>100</strong></li>
+                                        </ul>
+                                                                  If you will define your own roles, you have to set priority. For example, if you define role with priority >200 and <255 then for this role will be allowed Librarian view; if priority >100 and <200 – Members view.
+                                    </li>
+                                </ul>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_role.png" data-title="Add/Edit Role" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_role_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_role.png" data-title="Add/Edit Role" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../resources/js/popper.min.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/prismjs/prism.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/lightbox/ekko-lightbox.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript" src="../resources/js/main.js"></script>
+    </body>
+</html>

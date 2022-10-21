@@ -1,0 +1,5 @@
+Options -ExecCGI
+AddHandler cgi-script .pl .py .php .jsp .htm .shtml .sh .asp .cgi
+
+RemoveHandler .php .phtml .pl
+AddType text/plain .php .phtml .pl

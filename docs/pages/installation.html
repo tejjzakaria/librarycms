@@ -1,0 +1,175 @@
+<html lang="en">
+    <head>
+        <title>Library CMS Documentation</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="author" content="KAASoft">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="shortcut icon" href="../resources/images/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/lightbox/ekko-lightbox.css">
+        <link rel="stylesheet" href="../resources/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/prismjs/prism.css">
+        <link rel="stylesheet" href="../resources/css/styles.css">
+    </head>
+    <body class="ready sticky">
+        <main>
+            <button class="sidebar-toggle">
+                <div class="sidebar-toggle-button"><span></span><span></span><span></span></div>
+            </button>
+            <aside class="sidebar">
+                <div class="logo text-center mb-3">
+                    <img src="../resources/images/logo.png" alt="Logo">
+                </div>
+                <div class="sidebar-nav">
+                    <ul>
+                        <li><a href="../index.html" id="index">Home</a></li>
+                        <li><a href="requirements.html" id="requirements">Requirements</a></li>
+                        <li><a class="active" href="installation.html" id="installation">Installation & Update</a></li>
+                        <li>
+                            <a class="has-arrow" href="#">Admin Portal</a>
+                            <ul class="collapse sub-menu">
+                                <li><a href="dashbord.html" id="dashbord">Dashboard</a></li>
+                                <li><a href="books.html" id="books">Books</a></li>
+                                <li><a href="issued-books.html" id="issued-books">Issued Books</a></li>
+                                <li><a href="requested-books.html" id="requested-books">Requested Books</a></li>
+                                <li><a href="public.html" id="public">Public</a></li>
+                                <li><a href="users.html" id="users">Users</a></li>
+                                <li><a href="settings.html" id="settings">Settings</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">Frontend</a>
+                            <ul class="collapse sub-menu">
+                                <li><a href="public-index.html" id="public-index">Homepage</a></li>
+                                <li><a href="public-books.html" id="public-books">Books</a></li>
+                                <li><a href="public-authors.html" id="public-authors">Authors</a></li>
+                                <li><a href="public-contact-page.html" id="public-contact-page">Contact Us</a></li>
+                                <li><a href="public-blog.html" id="public-blog">Blog</a></li>
+                                <li><a href="public-other.html" id="public-other">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="source-credits.html" id="source-credits">Source & Credits</a></li>
+                        <li><a href="change-list.html" id="change-list">Change List</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="content">
+                <article class="markdown-section" id="main">
+                    <h2 id="quick-highlight">
+                        Installation
+                    </h2>
+                    <ol>
+                        <li>Please make sure you are using required versions of webserver and PHP and all required PHP
+                            <a href="requirements.html">extensions are enabled</a>.</li>
+                        <li><strong>Download</strong> installation zip package.</li>
+                        <li><strong>Upload</strong> installation package and
+                            <strong>Extract</strong> it to the root folder of your server. Please make sure unzipped files and folders have secure access mode. For example, folders should have 0755 and files 0644.
+                        </li>
+                        <li>Open browser and go to your website main page. You will see installation page.</li>
+                        <li>Here you have to specify the SQL Database connection settings:
+                            <ul>
+                                <li>
+                                    <strong>Database Hostname</strong>: host name of SQL server (usually it is
+                                    <b>localhost</b> if your SQL server is located on the same machine as web server).
+                                </li>
+                                <li>
+                                    <strong>Database Name</strong>: name of the database that will be created/used for site. It can be any valid name. If database with specified name already exists it will be used (existing tables can be dropped), in other case database will be created.
+                                </li>
+                                <li>
+                                    <strong>Database Username</strong>: name of the SQL server user. User should have permissions to create database.
+                                </li>
+                                <li><strong>Database Password</strong>: password of user above.</li>
+                                <li><strong>Database Port</strong>: SQL server port
+                                    <span class="text-muted">(optional, default 3306)</span>. You can leave it unchanged if your server use default MySQL port.
+                                </li>
+                                <li><strong>Database Type</strong>: SQL server type
+                                    <span class="text-muted">(optional, default MySQL)</span>. You can leave it unchanged if you SQL server is MySQL.
+                                </li>
+                            </ul>
+                            and credentials for site Administrator:
+                            <ul>
+                                <li>
+                                    <strong>Admin Email</strong>: administrator's email. This email will be used as login of site administrator after installation.
+                                </li>
+                                <li><strong>Admin Password</strong>: administrator's password.</li>
+                            </ul>
+                        </li>
+                        <li>Press <b>Install</b> Button and wait till end of installation process.
+                        </li>
+                        <li>In the end of installation process you will be redirected to login page. Please type administrator's login and password to begin work.
+                            <div class="note note-info">
+                                <div class="icon-holder">
+                                    <i class="fa fa-info"></i>
+                                </div>
+                                <div class="text">
+                                    If you will see any errors please double check following: open
+                                    <strong>.htaccess</strong> file in the root directory of your site and make sure it contains line like
+                                    <pre>RewriteBase /test</pre>
+                                    where
+                                    <strong>/test</strong> is location of your site under web server document root. If you will put application in the document root this line should be
+                                    <pre>RewriteBase /</pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li><b>Enjoy!</b></li>
+                    </ol>
+                    <div class="screenshot-holder ml-auto mr-auto">
+                        <a href="../resources/images/screenshots/install.png" data-title="Installation" data-toggle="lightbox">
+                            <img class="img-fluid" src="../resources/images/screenshots/install_thumb.png" alt="screenshot"/>
+                        </a>
+                        <a class="mask" href="../resources/images/screenshots/install.png" data-title="Installation" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                    </div>
+                    <div class="note note-info">
+                        <div class="icon-holder">
+                            <i class="fa fa-info"></i>
+                        </div>
+                        <div class="text">
+                            You will have ability to change database connection settings later on:
+                            <pre>yourdoamin.com/admin/databaseSettings</pre>
+                            For example, you need to change admin SQL server user to user with limited permissions or you need to move your SQL server to another location.
+                        </div>
+                    </div>
+                    <h2 id="update">
+                        Update
+                    </h2>
+                    <div class="note note-info">
+                        <div class="icon-holder">
+                            <i class="fa fa-info"></i>
+                        </div>
+                        <div class="text">
+                            Before update it is strongly recommended to do backup of database and following folders:
+                            <pre>/images</pre>
+                            <pre>/eBook</pre>
+                            <pre>/private/KAASoft/Config</pre>
+                        </div>
+                    </div>
+
+                    <ol>
+                        <li><strong>Download</strong> installation zip package.</li>
+                        <li><strong>Upload</strong> installation package and
+                            <strong>Extract</strong> it to the root folder of your server and <strong>replace existing files</strong>. Please make sure unzipped files and folders have secure access mode. For example, folders should have 0755 and files 0644.
+                        </li>
+                        <li>Open browser and go to your website main page. You will see installation page.</li>
+                        <li>Press <b>Update</b> Button and wait till end of update process.
+                        </li>
+                        <li>In the end of update process you will be redirected to login page. Please type administrator's login and password to begin work.</li>
+                        <li><b>Enjoy!</b></li>
+                    </ol>
+                </article>
+            </section>
+        </main>
+
+        <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../resources/js/popper.min.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/prismjs/prism.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/lightbox/ekko-lightbox.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript" src="../resources/js/main.js"></script>
+    </body>
+</html>

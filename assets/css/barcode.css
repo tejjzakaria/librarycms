@@ -1,0 +1,58 @@
+@media print and (-webkit-min-device-pixel-ratio : 0) and (min-resolution : .001dpcm) {
+    body {
+        zoom : 150%;
+    }
+}
+
+header, header *, aside, aside *, footer, footer *, .print-hide, .print-hide *, h1, h2, h3, h5, h6, a, input, select, textarea, pre, .card, button {
+    display : none !important;
+    margin  : 0 !important;
+    padding : 0 !important;
+    border  : 0 !important;
+    width   : 0;
+}
+header div:last-child,.is_stuck {
+    display : none !important;
+    margin  : 0 !important;
+    padding : 0 !important;
+    border  : 0 !important;
+    width   : 0;
+    position: absolute !important;
+    left: -9999999px !important;
+}
+.page-wrapper, .container-fluid, .container, .row, .card, .card-body {
+    margin  : 0 !important;
+    padding : 0 !important;
+}
+
+.page-wrapper,
+.container-fluid {
+    margin  : 0 !important;
+    padding : 0 !important;
+    border  : 0 !important;
+    width   : 100%;
+}
+
+.container {
+    width : 100%;
+}
+
+@page {
+    size   : A4;
+    margin : 0;
+}
+
+#main-wrapper, .page-wrapper {
+    width : 100% !important;
+}
+
+.a4-page {
+    display          : block;
+    margin           : 0 !important;
+    page-break-after : always;
+
+    /*zoom: 150%;*/
+}
+.a4-page:last-child {
+    page-break-after : auto;
+}

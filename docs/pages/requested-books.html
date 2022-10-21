@@ -1,0 +1,118 @@
+<html lang="en">
+    <head>
+        <title>Library CMS Documentation</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="author" content="KAASoft">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="shortcut icon" href="../resources/images/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/lightbox/ekko-lightbox.css">
+        <link rel="stylesheet" href="../resources/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/prismjs/prism.css">
+        <link rel="stylesheet" href="../resources/css/styles.css">
+    </head>
+    <body class="ready sticky">
+        <main>
+            <button class="sidebar-toggle">
+                <div class="sidebar-toggle-button"><span></span><span></span><span></span></div>
+            </button>
+            <aside class="sidebar">
+                <div class="logo text-center mb-3">
+                    <img src="../resources/images/logo.png" alt="Logo">
+                </div>
+                <div class="sidebar-nav">
+                    <ul>
+                        <li><a href="../index.html" id="index">Home</a></li>
+                        <li><a href="requirements.html" id="requirements">Requirements</a></li>
+                        <li><a href="installation.html" id="installation">Installation & Update</a></li>
+                        <li class="active">
+                            <a class="has-arrow" href="#">Admin Portal</a>
+                            <ul class="sub-menu collapse show">
+                                <li><a href="dashbord.html" id="dashbord">Dashboard</a></li>
+                                <li><a href="books.html" id="books">Books</a></li>
+                                <li><a href="issued-books.html" id="issued-books">Issued Books</a></li>
+                                <li>
+                                    <a class="active" href="requested-books.html" id="requested-books">Requested Books</a>
+                                </li>
+                                <li><a href="public.html" id="public">Public</a></li>
+                                <li><a href="users.html" id="users">Users</a></li>
+                                <li><a href="settings.html" id="settings">Settings</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">Frontend</a>
+                            <ul class="collapse sub-menu">
+                                <li><a href="public-index.html" id="public-index">Homepage</a></li>
+                                <li><a href="public-books.html" id="public-books">Books</a></li>
+                                <li><a href="public-authors.html" id="public-authors">Authors</a></li>
+                                <li><a href="public-contact-page.html" id="public-contact-page">Contact Us</a></li>
+                                <li><a href="public-blog.html" id="public-blog">Blog</a></li>
+                                <li><a href="public-other.html" id="public-other">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="source-credits.html" id="source-credits">Source & Credits</a></li>
+                        <li><a href="change-list.html" id="change-list">Change List</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="content">
+                <article class="markdown-section" id="main">
+                    <h2 id="dashboard">
+                        Requested Books
+                    </h2>
+                    <p>This section is for processing requests from registered members. Here librarian can see all book requests and prepare books to issue. There is ability to configure email notifications about receiving new book requests by librarian and email sending to member about changing status of request (request can be accepted or rejected).</p>
+                    <p>Member(reader) will see on this page all own requested books and can create new requests.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="screenshot-holder ml-auto mr-auto">
+                                <a href="../resources/images/screenshots/requests.png" data-title="Issued Books" data-toggle="lightbox">
+                                    <img class="img-fluid" src="../resources/images/screenshots/requests_thumb.png" alt="screenshot"/>
+                                </a>
+                                <a class="mask" href="../resources/images/screenshots/requests.png" data-title="Issued Books" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="screenshot-holder ml-auto mr-auto">
+                                <a href="../resources/images/screenshots/add_request.png" data-title="Issued Books" data-toggle="lightbox">
+                                    <img class="img-fluid" src="../resources/images/screenshots/add_request_thumb.png" alt="screenshot"/>
+                                </a>
+                                <a class="mask" href="../resources/images/screenshots/add_request.png" data-title="Issued Books" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="screenshot-holder ml-auto mr-auto">
+                                <a href="../resources/images/screenshots/request_email.png" data-title="Issued Books" data-toggle="lightbox">
+                                    <img class="img-fluid" src="../resources/images/screenshots/request_email_thumb.png" alt="screenshot"/>
+                                </a>
+                                <a class="mask" href="../resources/images/screenshots/request_email.png" data-title="Issued Books" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="screenshot-holder ml-auto mr-auto">
+                                <a href="../resources/images/screenshots/request_email_2.png" data-title="Issued Books" data-toggle="lightbox">
+                                    <img class="img-fluid" src="../resources/images/screenshots/request_email_2_thumb.png" alt="screenshot"/>
+                                </a>
+                                <a class="mask" href="../resources/images/screenshots/request_email_2.png" data-title="Issued Books" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../resources/js/popper.min.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/prismjs/prism.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/lightbox/ekko-lightbox.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript" src="../resources/js/main.js"></script>
+    </body>
+</html>

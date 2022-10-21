@@ -1,0 +1,88 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
+
+ALTER TABLE `Reviews` 
+DROP FOREIGN KEY `REVIEW_USER`;
+
+CREATE TABLE IF NOT EXISTS `BookRatings` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `bookId` INT(10) UNSIGNED NOT NULL,
+  `userId` INT(10) UNSIGNED NOT NULL,
+  `rating` INT(1) NOT NULL,
+  `creationDateTime` DATETIME NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  INDEX `BOOKRATINGS_BOOK_idx` (`bookId` ASC),
+  INDEX `BOOKRATINGS_USER_idx` (`userId` ASC),
+  CONSTRAINT `BOOKRATINGS_BOOK`
+    FOREIGN KEY (`bookId`)
+    REFERENCES `Books` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `BOOKRATINGS_USER`
+    FOREIGN KEY (`userId`)
+    REFERENCES `Users` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+DEFAULT CHARACTER SET = utf8;
+
+ALTER TABLE `Books` 
+ADD COLUMN `metaTitle` VARCHAR(200) NULL DEFAULT NULL AFTER `language`,
+ADD COLUMN `metaKeywords` VARCHAR(250) NULL DEFAULT NULL AFTER `metaTitle`,
+ADD COLUMN `rating` FLOAT(3,2) NULL DEFAULT '0.00' AFTER `metaKeywords`,
+ADD COLUMN `metaDescription` LONGTEXT NULL DEFAULT NULL AFTER `rating`;
+
+ALTER TABLE `Images` 
+ADD COLUMN `isExternalLink` BIT(1) NOT NULL DEFAULT b'0' AFTER `isGallery`;
+
+ALTER TABLE `Languages` 
+ADD COLUMN `isRTL` BIT(1) NOT NULL DEFAULT b'0' AFTER `shortCode`;
+
+ALTER TABLE `Reviews` 
+CHANGE COLUMN `userId` `userId` INT(10) UNSIGNED NULL DEFAULT NULL COMMENT 'User that created this review' ,
+ADD COLUMN `bookId` INT(10) UNSIGNED NOT NULL AFTER `userId`,
+ADD COLUMN `email` VARCHAR(150) NULL DEFAULT NULL AFTER `text`,
+ADD COLUMN `name` VARCHAR(200) NULL DEFAULT NULL AFTER `email`,
+ADD COLUMN `isPublish` BIT(1) NOT NULL DEFAULT b'0' AFTER `name`,
+ADD COLUMN `creationDateTime` DATETIME NOT NULL AFTER `isPublish`,
+ADD INDEX `REVIEW_BOOK_idx` (`bookId` ASC);
+
+ALTER TABLE `Reviews` 
+ADD CONSTRAINT `REVIEW_BOOK`
+  FOREIGN KEY (`bookId`)
+  REFERENCES `Books` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE,
+ADD CONSTRAINT `REVIEW_USER`
+  FOREIGN KEY (`userId`)
+  REFERENCES `Users` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+  
+--
+-- Dumping data for table `Permissions`
+--
+
+LOCK TABLES `Permissions` WRITE;
+/*!40000 ALTER TABLE `Permissions` DISABLE KEYS */;
+INSERT INTO `Permissions` VALUES (269,'bookBulkEdit','Book Bulk Edit','\0'),(270,'bookBulkBarCodeGenerate','Book Bulk Bar Code Generate','\0'),(271,'bookRatingSet','Book Rating Set',''),(272,'reviewCreatePublic','Review Create',''),(273,'themesListView','Themes','\0'),(274,'themeActivate','Theme Activate','\0'),(275,'sitemapGenerate','Generate Sitemap','\0');
+/*!40000 ALTER TABLE `Permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `RolePermissions`
+--
+
+LOCK TABLES `RolePermissions` WRITE;
+/*!40000 ALTER TABLE `RolePermissions` DISABLE KEYS */;
+INSERT INTO `RolePermissions` VALUES (2,270),(2,269),(2,163),(2,165),(2,164),(2,162);
+/*!40000 ALTER TABLE `RolePermissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

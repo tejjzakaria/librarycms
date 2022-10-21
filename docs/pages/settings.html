@@ -1,0 +1,552 @@
+<html lang="en">
+    <head>
+        <title>Library CMS Documentation</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="author" content="KAASoft">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="shortcut icon" href="../resources/images/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/lightbox/ekko-lightbox.css">
+        <link rel="stylesheet" href="../resources/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/prismjs/prism.css">
+        <link rel="stylesheet" href="../resources/css/styles.css">
+    </head>
+    <body class="ready sticky">
+        <main>
+            <button class="sidebar-toggle">
+                <div class="sidebar-toggle-button"><span></span><span></span><span></span></div>
+            </button>
+            <aside class="sidebar">
+                <div class="logo text-center mb-3">
+                    <img src="../resources/images/logo.png" alt="Logo">
+                </div>
+                <div class="sidebar-nav">
+                    <ul>
+                        <li><a href="../index.html" id="index">Home</a></li>
+                        <li><a href="requirements.html" id="requirements">Requirements</a></li>
+                        <li><a href="installation.html" id="installation">Installation & Update</a></li>
+                        <li class="active">
+                            <a class="has-arrow" href="#">Admin Portal</a>
+                            <ul class="sub-menu collapse show">
+                                <li><a href="dashbord.html" id="dashbord">Dashboard</a></li>
+                                <li><a href="books.html" id="books">Books</a></li>
+                                <li><a href="issued-books.html" id="issued-books">Issued Books</a></li>
+                                <li><a href="requested-books.html" id="requested-books">Requested Books</a></li>
+                                <li><a href="public.html" id="public">Public</a></li>
+                                <li><a href="users.html" id="users">Users</a></li>
+                                <li><a class="active" href="settings.html" id="settings">Settings</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">Frontend</a>
+                            <ul class="collapse sub-menu">
+                                <li><a href="public-index.html" id="public-index">Homepage</a></li>
+                                <li><a href="public-books.html" id="public-books">Books</a></li>
+                                <li><a href="public-authors.html" id="public-authors">Authors</a></li>
+                                <li><a href="public-contact-page.html" id="public-contact-page">Contact Us</a></li>
+                                <li><a href="public-blog.html" id="public-blog">Blog</a></li>
+                                <li><a href="public-other.html" id="public-other">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="source-credits.html" id="source-credits">Source & Credits</a></li>
+                        <li><a href="change-list.html" id="change-list">Change List</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="content">
+                <article class="markdown-section" id="main">
+                    <h2 id="dashboard">
+                        Settings
+                    </h2>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Email Notification Listing</h4>
+                                <p>This is a list of available email notifications. Each notification is connected with specific page (Trigger). It means that email will be sent when page is in using (usually when user creating or changing something). On this page any notification can be enabled/disabled.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/email_notifications.png" data-title="User Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/email_notifications_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/email_notifications.png" data-title="User Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Add/Edit Email Notification</h4>
+                                <p>To create email notification you have to use following page. First of all email notification should be linked with specific page (Route Name). Then some email properties need to be specified:</p>
+                                <ul>
+                                    <li><strong>Subject</strong> – email subject.</li>
+                                    <li><strong>From</strong> – sender email address.</li>
+                                    <li><strong>To</strong> – recipient emails separated by semicolon symbol ";"</li>
+                                </ul>
+                                <p>In the end you have to create email template by using html code and some short codes – values inside of brackets [ ] that will be replaced by real values. List of static codes is different for every page.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_email_notification.png" data-title="Add/Edit Email Notification" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_email_notification_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_email_notification.png" data-title="Add/Edit Email Notification" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Google Books Settings</h4>
+                                <p>You can create new books by importing data from Google. Here should be specified setting for Google Books API. To use Google Books API you have to generate your own API key (see
+                                    <a href="https://support.google.com/cloud/answer/6158862">https://support.google.com/cloud/answer/6158862</a> about Setting up API keys).
+                                </p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/google_books_settings.png" data-title="Google Books Settings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/google_books_settings_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/google_books_settings.png" data-title="Google Books Settings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Email Settings</h4>
+                                <p>This is global email settings page. It contains 2 parts:</p>
+                                <ul>
+                                    <li>Settings</li>
+                                    <li>Test settings</li>
+                                </ul>
+                                <p>Settings include Sending Method (it can be SMTP or PHP Mail), default sender email and sender name, template of email to notify users who delayed books. You can see 2 templates:</p>
+                                <ul>
+                                    <li>Default Message Template For Notify Delayed Users – this is template for quick editing of email content. It will be pasted in next template instead of short code
+                                        <strong>[DYNAMIC_CONTENT]</strong>.
+                                    </li>
+                                    <li>HTML Template For Notify Delayed Users</li>
+                                </ul>
+                                <p>When you will send email to delayed user email content will be combined following way:</p>
+                                <ol>
+                                    <li>Get <strong>HTML Template For Notify Delayed Users</strong> code.</li>
+                                    <li>Replace <strong>[DYNAMIC_CONTENT]</strong> inside of
+                                        <strong>HTML Template For Notify Delayed Users</strong> by
+                                        <strong>Default Message Template For Notify Delayed Users</strong>.
+                                    </li>
+                                    <li>Replace all another short codes in result html code.</li>
+                                    <li>Send email.</li>
+                                </ol>
+                                <p>After setting up you can check email configuration by sending test email to your own email address. You need to type your email address and press Send button. If you received test email it means email is configured properly.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/email_settings.png" data-title="Email Settings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/email_settings_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/email_settings.png" data-title="Email Settings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>SMTP Settings</h4>
+                                <p>This SMTP settings will be used if <strong>Send Method</strong> is SMTP on
+                                    <strong>Email Settings</strong> page. It has standard SMTP settings like server, port, user, password and security type.
+                                </p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/SMTP-settings.png" data-title="SMTP Settings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/SMTP-settings_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/SMTP-settings.png" data-title="SMTP Settings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Languages</h4>
+
+                                <p>CMS includes 2 manually translated languages:</p>
+                                <ul>
+                                    <li>English (en_US)</li>
+                                    <li>Russian (ru_RU)</li>
+                                </ul>
+                                <p>Also it includes following languages created automatically by Google Translate (they are disabled by default and can be enabled in
+                                    <strong>Languages settings</strong>):</p>
+                                <ul>
+                                    <li>German</li>
+                                    <li>French</li>
+                                    <li>Italian</li>
+                                    <li>Spanish</li>
+                                    <li>Portuguese</li>
+                                    <li>Danish</li>
+                                    <li>Chinese (Simplified)</li>
+                                    <li>Japanese</li>
+                                </ul>
+                                <p>To edit languages files you have to use PoEdit. You can download
+                                    <a href="http://poedit.net/download">PoEdit from this site</a>. It’s completely free! PoEdit supports versions for different OS (Operating System).
+                                </p>
+                                <h4 class="text-center">Translating Guide</h4>
+                                <ol>
+                                    <li>First thing that you should do is start PoEdit. New window should appear.
+                                        <div class="screenshot-holder ml-auto mr-auto">
+                                            <a href="../resources/images/screenshots/poedit_1.png" data-toggle="lightbox">
+                                                <img class="img-fluid" src="../resources/images/screenshots/poedit_1_thumb.png" alt="screenshot"/>
+                                            </a>
+                                            <a class="mask" href="../resources/images/screenshots/poedit_1.png" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>Next thing what you should do is press File -> “New catalog from POT file…" and select in project folder
+                                        <strong>locale/en/LC_MESSAGES/messages.pot</strong>.
+                                        <div class="screenshot-holder ml-auto mr-auto">
+                                            <a href="../resources/images/screenshots/poedit_2.png" data-toggle="lightbox">
+                                                <img class="img-fluid" src="../resources/images/screenshots/poedit_2_thumb.png" alt="screenshot"/>
+                                            </a>
+                                            <a class="mask" href="../resources/images/screenshots/poedit_2.png" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>Select the language you want to translate
+                                        <div class="screenshot-holder ml-auto mr-auto">
+                                            <a href="../resources/images/screenshots/poedit_3.png" data-toggle="lightbox">
+                                                <img class="img-fluid" src="../resources/images/screenshots/poedit_3_thumb.png" alt="screenshot"/>
+                                            </a>
+                                            <a class="mask" href="../resources/images/screenshots/poedit_3.png" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>Now you can start translating. To start translating, click on first "Source text" and put cursor in bottom textarea. Now translate, the text from upper textarea to bottom textarea.
+                                        <div class="screenshot-holder ml-auto mr-auto">
+                                            <a href="../resources/images/screenshots/poedit_4.png" data-toggle="lightbox">
+                                                <img class="img-fluid" src="../resources/images/screenshots/poedit_4_thumb.png" alt="screenshot"/>
+                                            </a>
+                                            <a class="mask" href="../resources/images/screenshots/poedit_4.png" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>As you can see the new translated text automatically fills up in “Translation" column. Now we need to save our translation, to do that, press "File -> Save as..".
+                                        Select the folder where to save the file, name the file and click Save. Language file should be saved as messages.po in folder
+                                        <strong>"locale/<a href="https://www.w3schools.com/TagS/ref_language_codes.asp">ISO Language Codes</a> + _ +
+                                            <a href="https://www.w3schools.com/TagS/ref_country_codes.asp">ISO Country Codes</a>/LC_MESSAGES"</strong>
+                                        <span class="text-muted">(for example: <strong>en_US</strong>)</span> (you can find examples in "locale" folder)
+                                    </li>
+                                    <li>
+                                        <p>Now we need to add a translation on the Languages page.<br>
+                                            <strong>Language Code</strong> =
+                                            <a href="https://www.w3schools.com/TagS/ref_language_codes.asp">ISO Language Codes</a> + _ +
+                                            <a href="https://www.w3schools.com/TagS/ref_country_codes.asp">ISO Country Codes</a>
+                                            <span class="text-muted">(for example: <strong>en_US</strong>)</span><br>
+                                            <strong>Language Short Code</strong> =
+                                            <a href="https://www.w3schools.com/TagS/ref_country_codes.asp">ISO Country Codes</a>
+                                        </p>
+                                    </li>
+                                    <li>To apply new language you have to <strong>restart apache</strong>.</li>
+                                    <li>Good Job!</li>
+                                </ol>
+
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/languages.png" data-title="Languages" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/languages_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/languages.png" data-title="Languages" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                                <div class="note note-info">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-info"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>Sometimes it is required to create/enable locale on your server. On Linux server it can be done by command
+                                            <code>locale-gen</code>, for example:
+                                        <pre>locale-gen fr_FR.UTF-8</pre>
+                                        Please contact your host provider about it if you don't have ability to do it yourself.</p>
+                                    </div>
+                                </div>
+
+                                <div class="note note-info">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-info"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>If you find not translated phrases you have to do following: open PoEdit and go to <a href="../resources/images/screenshots/poedit_5.png" data-title="Update catalogue" data-toggle="lightbox">"Catalogue -> Update from POT file.."</a>, select file <strong>locale/en/LC_MESSAGES/messages.pot</strong>. New phrases will be added to end of list.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Permissions</h4>
+                                <p>This is a list of all available permissions (site pages). You no need to use this page usually. This page is useful when you will create new pages only.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/permissions.png" data-title="Permissions" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/permissions_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/permissions.png" data-title="Permissions" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Database Settings</h4>
+                                <p>Here you can setup new or change existing database connection. Usually you can have just one connection, but sometimes it is required to change SQL server or use another SQL server user on the same database. In this case you can have some different database connections and simply switch between them.</p>
+
+                                <div class="note note-info">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-info"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>Please be very carefully with database settings. Wrong database connection can broke all site.</p>
+                                    </div>
+                                </div>
+
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/database_settings.png" data-title="Database Settings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/database_settings_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/database_settings.png" data-title="Database Settings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Site View Setting</h4>
+                                <p>Site View Settings helps you change view of site pages. Page has some predefined groups of settings:</p>
+                                <ul>
+                                    <li>
+                                        <strong>Genaral</strong> – some general settings like path to admin portal or blog, default currency, max number of search results and per page options for different pages.
+                                    </li>
+                                    <li><strong>Books</strong> – settings connected with books.</li>
+                                    <li>
+                                        <strong>Images</strong> – here you can define default images. It will be displayed if image is not specified.
+                                    </li>
+                                    <li><strong>Date/Time Formats</strong> – here can be changed date/time formats.</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/options_1.png" data-title="Site View Setting" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/options_1_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/options_1.png" data-title="Site View Setting" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/options_2.png" data-title="Site View Setting" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/options_2_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/options_2.png" data-title="Site View Setting" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/options_3.png" data-title="Site View Setting" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/options_3_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/options_3.png" data-title="Site View Setting" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/options_4.png" data-title="Site View Setting" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/options_4_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/options_4.png" data-title="Site View Setting" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Themes</h4>
+                                <p>Here you have ability to select frontend theme. Just press <strong>Activate</strong> button to apply new theme.</p>
+
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/themes.png" data-title="Themes" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/themes_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/themes.png" data-title="Themes" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>LDAP Settings</h4>
+                                <p>In General section you can enable LDAP settings. LDAP can work by 2 ways:</p>
+                                <ul>
+                                    <li>integrated with usual database authentication. In this case database authentication has priority. It means user first of all will be searched in database and if it couldn't be found in database Library CMS will try to find it in LDAP.   </li>
+                                    <li>as main authentication system. In this case default database authentication will be disabled and LDAP will work only.</li>
+                                </ul>
+                                <p>On Connection tab you have to define LDAP connection and LDAP admin user. Admin user should have at least read access to all LDAP users/groups and will be used to search users that will try to login. </p>
+                                <p>Also LDAP user can be automatically added to database. In this case user will be stored and next time user can be logged in via usual authentication even if LDAP will be disabled.</p>
+                                <p>User's details also can be got from LDAP attributes. You can setup these attributes on Attribute Mapping section.</p>
+                                <p>User always should have one of following roles: Admin, Librarian or Member. To identify user's role you have to define LDAP groups on Role Mapping tab.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/ldap.png" data-title=" Settings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/ldap_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/ldap.png" data-title=" Settings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Book Fields</h4>
+                                <p>In this sections you can define your own values for some book fields.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/bindings.png" data-title="Bindings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/bindings_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/bindings.png" data-title="Bindings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/bookSizes.png" data-title="Book Sizes" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/bookSizes_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/bookSizes.png" data-title="Book Sizes" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/bookTypes.png" data-title="Book Types" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/bookTypes_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/bookTypes.png" data-title="Book Types" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/physicalForms.png" data-title="Physical Forms" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/physicalForms_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/physicalForms.png" data-title="Physical Forms" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>SMS Settings</h4>
+                                <p>Here you can configure SMS account(s) to send SMS notifications to readers.</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/sms_settings.png" data-title="SMS Settings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/sms_settings_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/sms_settings.png" data-title="SMS Settings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Social Network Settings</h4>
+                                <p>On this page you can enable and configure authentication via some social networks.</p>
+                                <div class="note note-info">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-info"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>Some social networks (like <b>Facebook</b>) require <code>https</code> protocol. So if you are planning to use social network authentication please make sure your site is using <code>https</code>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/social_network_settings.png" data-title="Social Network Settings" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/social_network_settings_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/social_network_settings.png" data-title="Social Network Settings" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Book Custom Fields</h4>
+                                <p>Here you can add any custom field to Book.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/book_custom_fields.png" data-title="Book Custom Fields" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/book_custom_fields_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/book_custom_fields.png" data-title="Book Custom Fields" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/edit_book_custom_field.png" data-title="Book Custom Fields" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/edit_book_custom_field_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/edit_book_custom_field.png" data-title="Edit Book Custom Field" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Book Layout</h4>
+                                <p>On this page you can setup layout of components on book page in admin part. You can drug and drop any component, specify any custom location, hide components if you don't need it.</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/book_layout.png" data-title="Book Layout" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/book_layout_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/book_layout.png" data-title="Book Layout" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Server Error Handling</h4>
+                                <p>There is static template to display unhandled server errors. If you want to customize this template you have to edit following file: <code>/private/Templates/admin/epicEpicFail.html</code>. Make sure your template has following string: <code>%error_message%</code>. It will be replaced by actual error message. Please send us this message if you will see it (as well /logs/KAASoft.log file).</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../resources/js/popper.min.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/prismjs/prism.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/lightbox/ekko-lightbox.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript" src="../resources/js/main.js"></script>
+    </body>
+</html>

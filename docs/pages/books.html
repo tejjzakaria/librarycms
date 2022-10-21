@@ -1,0 +1,332 @@
+<html lang="en">
+    <head>
+        <title>Library CMS Documentation</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="author" content="KAASoft">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="shortcut icon" href="../resources/images/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/lightbox/ekko-lightbox.css">
+        <link rel="stylesheet" href="../resources/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../resources/js/plugins/prismjs/prism.css">
+        <link rel="stylesheet" href="../resources/css/styles.css">
+    </head>
+    <body class="ready sticky">
+        <main>
+            <button class="sidebar-toggle">
+                <div class="sidebar-toggle-button"><span></span><span></span><span></span></div>
+            </button>
+            <aside class="sidebar">
+                <div class="logo text-center mb-3">
+                    <img src="../resources/images/logo.png" alt="Logo">
+                </div>
+                <div class="sidebar-nav">
+                    <ul>
+                        <li><a href="../index.html" id="index">Home</a></li>
+                        <li><a href="requirements.html" id="requirements">Requirements</a></li>
+                        <li><a href="installation.html" id="installation">Installation & Update</a></li>
+                        <li class="active">
+                            <a class="has-arrow" href="#">Admin Portal</a>
+                            <ul class="sub-menu collapse show">
+                                <li><a href="dashbord.html" id="dashbord">Dashboard</a></li>
+                                <li><a class="active" href="books.html" id="books">Books</a></li>
+                                <li><a href="issued-books.html" id="issued-books">Issued Books</a></li>
+                                <li><a href="requested-books.html" id="requested-books">Requested Books</a></li>
+                                <li><a href="public.html" id="public">Public</a></li>
+                                <li><a href="users.html" id="users">Users</a></li>
+                                <li><a href="settings.html" id="settings">Settings</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">Frontend</a>
+                            <ul class="collapse sub-menu">
+                                <li><a href="public-index.html" id="public-index">Homepage</a></li>
+                                <li><a href="public-books.html" id="public-books">Books</a></li>
+                                <li><a href="public-authors.html" id="public-authors">Authors</a></li>
+                                <li><a href="public-contact-page.html" id="public-contact-page">Contact Us</a></li>
+                                <li><a href="public-blog.html" id="public-blog">Blog</a></li>
+                                <li><a href="public-other.html" id="public-other">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="source-credits.html" id="source-credits">Source & Credits</a></li>
+                        <li><a href="change-list.html" id="change-list">Change List</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="content">
+                <article class="markdown-section" id="main">
+                    <h2 id="dashboard">
+                        Books
+                    </h2>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Book Listing</h4>
+                                <p>This is page where you can view all books that you have in your database. Each book has short description (title, publisher, genre, author, ISBN, quantity) and some useful links (edit, clone or delete book). Also on this page you can start creation of books. There is available 2 ways to create book:</p>
+                                <ul>
+                                    <li>book creation by entering all data manually</li>
+                                    <li>book creation by using Google Books data if required book exists in Google Books</li>
+                                </ul>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/books.png" data-title="Book Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/books_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/books.png" data-title="Book Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                                <!--<div class="note note-info">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-info"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>Bulk Edit Books</p>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Add/Edit Book</h4>
+                                <p>Here you can create new or edit existing book. As you can see each book has a lot of fields like book title, authors, genres, ISBN, etc. Also you can upload book cover and type some notes about book.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_book.png" data-title="Add/Edit Book" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_book_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_book.png" data-title="Add/Edit Book" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Publisher Listing</h4>
+                                <p>This is a list of book publishers in your database.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/publishers.png" data-title="Publisher Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/publishers_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/publishers.png" data-title="Publisher Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Add/Edit Publisher</h4>
+                                <p>Publisher is very simple object in our system. It has just one field – name of publisher. Here you create or change existing publisher.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_publisher.png" data-title="Add/Edit Publisher" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_publisher_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_publisher.png" data-title="Add/Edit Publisher" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Series Listing</h4>
+                                <p>List of book series.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/series.png" data-title="Series Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/series_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/series.png" data-title="Add/Edit Publisher" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Add/Edit Series</h4>
+                                <p>Series is like a publisher has one field only – title of series. Here you can create/edit book series.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_series.png" data-title="Add/Edit Series" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_series_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_series.png" data-title="Add/Edit Publisher" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Author Listing</h4>
+                                <p>This is a list of book authors.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/authors.png" data-title="Author Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/authors_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/authors.png" data-title="Author Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Add/Edit Author</h4>
+                                <p>Author is more complex object then publisher or series. It includes full name of authors, author’s photo and description (for example, it can contains biography of writer or/and his bibliography.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_author.png" data-title="Add/Edit Author" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_author_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_author.png" data-title="Add/Edit Author" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Genre Listing</h4>
+                                <p>This is list of book genres.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/genres.png" data-title="Genre Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/genres_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/genres.png" data-title="Genre Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Add/Edit Genre</h4>
+                                <p>And again you can see very simple object – book genre. It has just title.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_genre.png" data-title="Add/Edit Genre" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_genre_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_genre.png" data-title="Add/Edit Genre" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Store Listing</h4>
+                                <p>This is list of book stores.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/stores.png" data-title="Store Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/stores_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/stores.png" data-title="Store Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Add/Edit Store</h4>
+                                <p>It is creation and editing of stores.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_store.png" data-title="Add/Edit Store" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_store_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_store.png" data-title="Add/Edit Store" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Location Listing</h4>
+                                <p>This is list of book locations.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/locations.png" data-title="Location Listing" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/locations_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/locations.png" data-title="Location Listing" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Add/Edit Location</h4>
+                                <p>It is creation and editing of locations.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/add_location.png" data-title="Add/Edit Location" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/add_location_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/add_location.png" data-title="Add/Edit Location" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Import & Export CSV</h4>
+                                <p>Here you have ability to import/export books from/to csv(comma separated values) files. Import will save your time on creation each book manually. We recommend to use import on empty database right after installation. It doesn’t mean you can do it later ;) </p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/import_export.png" data-title="Import & Export CSV" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/import_export_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/import_export.png" data-title="Import & Export CSV" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Reviews</h4>
+                                <p>On this page you can view book reviews.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/reviews.png" data-title="Reviews" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/reviews_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/reviews.png" data-title="Reviews" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-sm-12">
+                                <h4>Book Barcode Generation</h4>
+                                <p>On this page you can generate barcodes for your books. Print preview is also available here.</p>
+                                <div class="screenshot-holder ml-auto mr-auto">
+                                    <a href="../resources/images/screenshots/book_barcode_gen.png" data-title="Book Barcode Generation" data-toggle="lightbox">
+                                        <img class="img-fluid" src="../resources/images/screenshots/book_barcode_gen_thumb.png" alt="screenshot"/>
+                                    </a>
+                                    <a class="mask" href="../resources/images/screenshots/book_barcode_gen.png" data-title="Book Barcode Generation" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../resources/js/popper.min.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/prismjs/prism.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/lightbox/ekko-lightbox.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="../resources/js/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript" src="../resources/js/main.js"></script>
+    </body>
+</html>

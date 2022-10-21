@@ -1,0 +1,52 @@
+ForceType application/octet-stream
+<FilesMatch "(?i).fb2$">
+    ForceType application/x-fictionbook
+</FilesMatch>
+<FilesMatch "(?i).epub$">
+    ForceType application/epub+zip
+</FilesMatch>
+<FilesMatch "(?i).mobi$">
+    ForceType application/x-mobipocket-ebook
+</FilesMatch>
+<FilesMatch "(?i).djvu$">
+    ForceType image/vnd.djvu
+</FilesMatch>
+<FilesMatch "(?i).pdf$">
+    ForceType application/pdf
+</FilesMatch>
+<FilesMatch "(?i).azw$">
+    ForceType application/vnd.amazon.ebook
+</FilesMatch>
+<FilesMatch "(?i).azw3$">
+    ForceType application/vnd.amazon.mobi8-ebook
+</FilesMatch>
+<FilesMatch "(?i).html$">
+    ForceType text/html
+</FilesMatch>
+<FilesMatch "(?i).doc$">
+    ForceType application/msword
+</FilesMatch>
+<FilesMatch "(?i).docx$">
+    ForceType application/vnd.openxmlformats-officedocument.wordprocessingml.document
+</FilesMatch>
+<FilesMatch "(?i).rtf$">
+    ForceType application/rtf
+</FilesMatch>
+<FilesMatch "(?i).txt$">
+    ForceType text/plain
+</FilesMatch>
+<FilesMatch "(?i).cbr$">
+    ForceType application/x-cbr
+</FilesMatch>
+<FilesMatch "(?i).cbz$">
+    ForceType application/x-cbr
+</FilesMatch>
+<FilesMatch "(?i).chm$">
+    ForceType application/vnd.ms-htmlhelp
+</FilesMatch>
+<FilesMatch "(?i).rar$">
+    ForceType application/x-rar-compressed
+</FilesMatch>
+<FilesMatch "(?i).zip$">
+    ForceType application/zip
+</FilesMatch>

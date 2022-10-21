@@ -1,0 +1,38 @@
+.menu-item-block {
+    cursor        : move;
+    padding       : 10px 10px;
+    color         : #333333;
+    font-weight   : 400;
+    border        : 1px solid #CCCCCC;
+    border-radius : 3px;
+    margin        : 10px 0;
+}
+
+.menu-container {
+    display    : block;
+    position   : relative;
+    margin     : 0;
+    padding    : 0;
+    list-style : none;
+}
+
+.menu-container ol {
+    list-style : none;
+}
+
+.menu-item-block .fa {
+    cursor  : pointer;
+    padding : 0 7px 0 0;
+}
+
+.menu-item-block .form-group {
+    margin-bottom : 0;
+}
+
+.sortable li.mjs-nestedSortable-collapsed > ol {
+    display : none;
+}
+.menu-item-block .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 13px !important;
+    line-height: 18px !important;
+}
